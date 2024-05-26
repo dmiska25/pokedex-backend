@@ -1,0 +1,13 @@
+# Use postgres/example user/password credentials
+version: '3.1'
+
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: pokemonAdmin
+      POSTGRES_PASSWORD: Pokemon!
+      POSTGRES_DB: PokemonDB
+    ports:
+      - 5433:5432
